@@ -1,0 +1,18 @@
+micronaut:
+  application:
+    name: demo
+  security:
+    authentication: cookie
+    oauth2:
+      clients:
+        default:
+          client-id: ${OAUTH_CLIENT_ID}
+          client-secret: ${OAUTH_CLIENT_SECRET}
+datasources:
+  default:
+    url: jdbc:mariadb://localhost:3306/db
+    driverClassName: org.mariadb.jdbc.Driver
+    username: root
+    password: ''
+    schema-generate: CREATE_DROP
+    dialect: MYSQL
